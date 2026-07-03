@@ -7,84 +7,100 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin:0; padding:0; box-sizing:border-box; font-family:'Cairo', sans-serif; }
-        body { background:#F8F6F2; color:#333; }
+        body { 
+            background-color: #F8F6F2; 
+            color: #333;
+            /* خلفية اللوجو الخاص بك */
+            background-image: url('https://i.ibb.co/ks56y1yd/1782867067301.png'); 
+            background-size: 150px; 
+            background-repeat: repeat; 
+            background-attachment: fixed; 
+            background-blend-mode: lighten; 
+        }
         header { background:#fff; padding:20px 8%; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 15px rgba(0,0,0,.08); position:sticky; top:0; z-index:1000; }
         .logo { font-size:32px; font-weight:bold; color:#5E7C4D; }
         .hero { padding:80px 8%; text-align:center; }
         .hero h1 { font-size:45px; color:#5E7C4D; margin-bottom:20px; }
         .section-title { text-align:center; font-size:40px; margin-top:70px; margin-bottom:40px; color:#5E7C4D; }
         .box-container { max-width:700px; margin:auto; background:white; padding:30px; border-radius:25px; box-shadow:0 10px 30px rgba(0,0,0,0.1); }
-        .btn { background:#5E7C4D; color:white; padding:15px 40px; border:none; border-radius:15px; cursor:pointer; font-size:18px; margin-top:20px; width:100%; }
-        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:20px; padding:20px; }
+        .btn { background:#5E7C4D; color:white; padding:15px 40px; border:none; border-radius:15px; cursor:pointer; font-size:18px; margin-top:20px; width:100%; transition: 0.3s; }
+        .btn:hover { background: #47603b; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:15px; margin:20px 0; }
         .card { background:#fff; border:1px solid #eee; border-radius:15px; padding:15px; text-align:center; cursor:pointer; }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">Fei B0X 🎁</div>
-</header>
+<header><div class="logo">Fei B0X 🎁</div></header>
 
 <section class="hero">
     <h1>Every Gift Tells a Story ✨</h1>
     <p>صممي هديتك الخاصة أو اتركي للذكاء الاصطناعي مهمة التخيل!</p>
 </section>
 
-<!-- 1. AI Gift Finder -->
+<!-- AI Gift Finder -->
 <section id="finder" style="padding:40px 8%;">
     <h2 class="section-title">🤖 Fei B0X AI Designer</h2>
     <div class="box-container">
-        <label>الهدية لمين؟</label>
-        <select id="person" style="width:100%; padding:15px; margin:10px 0; border-radius:10px;">
-            <option>ولد</option><option>بنت</option><option>طفل</option>
-        </select>
-        <label>إيه هواياته أو بيحب إيه؟</label>
-        <textarea id="about" placeholder="مثلاً: بيحب القهوة واللون الأزرق.." style="width:100%; padding:15px; height:80px; border-radius:10px;"></textarea>
-        <button class="btn" onclick="designGift()">تخيلي البوكس المثالي ✨</button>
-        <div id="ai-output" style="margin-top:20px; padding:15px; display:none; border-right: 5px solid #5E7C4D; background:#f9f9f9;">
-            <p id="result-text"></p>
+        <textarea id="userInput" placeholder="احكي لي الشخص اللي بتفكري فيه بيحب إيه.." style="width:100%; height:100px; padding:15px; border-radius:12px; border:1px solid #ccc;"></textarea>
+        <button class="btn" onclick="generateAIBox()">تخيل البوكس المثالي ✨</button>
+        <div id="ai-result" style="margin-top:30px; display:none; border:2px solid #5E7C4D; padding:20px; border-radius:20px; text-align:center; background: white;">
+            <h2 id="box-title"></h2>
+            <img id="box-img" src="" style="width:100%; border-radius:15px; margin:15px 0;">
+            <p id="box-desc" style="font-weight:bold;"></p>
+            <a href="https://www.instagram.com/fei_b0x" style="display:block; margin-top:15px; padding:12px; background:#E1306C; color:white; border-radius:10px; text-decoration:none;">اطلبي هذا التخيل من انستجرام 📸</a>
         </div>
     </div>
 </section>
 
-<!-- 2. Build Your Box -->
+<!-- Build Your Own Box -->
 <section id="build" style="padding:40px 8%;">
     <h2 class="section-title">💝 كوني بوكسك بنفسك</h2>
     <div class="box-container">
         <div class="grid" id="selection-area">
-            <div class="card"><input type="checkbox" value="شوكولاتة 🍫"> شوكولاتة 🍫</div>
-            <div class="card"><input type="checkbox" value="مج ☕"> مج ☕</div>
-            <div class="card"><input type="checkbox" value="شمعة 🕯️"> شمعة 🕯️</div>
-            <div class="card"><input type="checkbox" value="سكين كير 🌸"> سكين كير 🌸</div>
-            <div class="card"><input type="checkbox" value="سماعات 🎧"> سماعات 🎧</div>
+            <label class="card"><input type="checkbox" value="ورد 🌹"> ورد 🌹</label>
+            <label class="card"><input type="checkbox" value="شوكولاتة 🍫"> شوكولاتة 🍫</label>
+            <label class="card"><input type="checkbox" value="مج ☕"> مج ☕</label>
+            <label class="card"><input type="checkbox" value="شمعة 🕯️"> شمعة 🕯️</label>
+            <label class="card"><input type="checkbox" value="سكين كير 🌸"> سكين كير 🌸</label>
+            <label class="card"><input type="checkbox" value="سماعات 🎧"> سماعات 🎧</label>
         </div>
-        <button class="btn" onclick="buildMyBox()">وريني شكل البوكس المتخيل ✨</button>
-        <div id="box-result" style="margin-top:20px; padding:15px; display:none; border:2px dashed #5E7C4D; border-radius:10px;">
-            <h3 id="final-box-text"></h3>
-        </div>
-        <a href="https://www.instagram.com/fei_b0x" style="display:block; text-align:center; margin-top:20px; color:#E1306C; font-weight:bold;">اطلبي الآن عبر انستجرام 📸</a>
+        <a href="https://www.instagram.com/fei_b0x" class="btn" style="text-decoration:none; display:block; text-align:center;">اطلبي اختياراتك من انستجرام 📸</a>
     </div>
 </section>
 
-<script>
-    // منطق الـ AI Designer
-    function designGift() {
-        let about = document.getElementById("about").value;
-        if(about.length < 3) { alert("اكتبي لي تفاصيل أكتر!"); return; }
-        let theme = about.includes("قهوة") ? "بوكس طقوس القهوة الدافئة ☕" : "بوكس هدايا مخصص ومصمم خصيصاً 🎁";
-        document.getElementById("ai-output").style.display = "block";
-        document.getElementById("result-text").innerHTML = "تخيلت لك <b>" + theme + "</b>.<br> البوكس هيكون فيه لمسات تعبر عن: " + about + ".";
-    }
+<section style="padding:40px 8%;">
+    <h2 class="section-title">ليه Fei B0X؟ 💚</h2>
+    <div class="grid">
+        <div class="card"><h3>🎁 بوكسات مخصصة</h3></div>
+        <div class="card"><h3>🚚 توصيل سريع</h3></div>
+        <div class="card"><h3>💌 كارت مجاني</h3></div>
+    </div>
+</section>
 
-    // منطق البناء التفاعلي
-    function buildMyBox() {
-        let selected = [];
-        document.querySelectorAll('#selection-area input:checked').forEach((cb) => { selected.push(cb.value); });
-        if(selected.length === 0) { alert("اختاري منتجات الأول!"); return; }
-        document.getElementById("box-result").style.display = "block";
-        document.getElementById("final-box-text").innerHTML = "البوكس بتاعك هيحتوي على:<br>" + selected.join(" + ");
+<footer style="background:#222;color:white;padding:30px;text-align:center;">
+    <h2>Fei B0X 🎁</h2>
+    <p>©️ 2026 جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+    function generateAIBox() {
+        let input = document.getElementById("userInput").value.toLowerCase();
+        let title, desc, img;
+        if(input.includes("ورد") || input.includes("بنت")) {
+            title = "بوكس الجمال والأنوثة 🌸";
+            desc = "ورد طبيعي + شوكولاتة فاخرة + شمعة معطرة";
+            img = "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500";
+        } else {
+            title = "بوكس Fei B0X الشامل 🎁";
+            desc = "تجميعة مميزة مصممة خصيصاً لذوقك الشخصي";
+            img = "https://images.unsplash.com/photo-1549465220-1a8b9e984f47?w=500";
+        }
+        document.getElementById("box-title").innerText = title;
+        document.getElementById("box-desc").innerText = "المحتويات: " + desc;
+        document.getElementById("box-img").src = img;
+        document.getElementById("ai-result").style.display = "block";
     }
 </script>
-
 </body>
 </html>
