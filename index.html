@@ -1,256 +1,38 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FEE BOX & ViB0x | Ultimate Gift Magic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Fei B0X | هدايا مخصصة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Tajawal', 'Cairo', sans-serif; 
-            background-image: url('https://i.ibb.co/ks56y1yd/1782867067301.png');
-            background-size: cover; 
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            display: flex; 
-            flex-direction: column;
-            align-items: center; 
-            min-height: 100vh; 
-            margin: 0; 
-            padding: 20px 0;
-            box-sizing: border-box;
-        }
-        
-        .box-container { 
-            background: rgba(255, 255, 255, 0.88); 
-            backdrop-filter: blur(10px);
-            padding: 35px; 
-            border-radius: 25px; 
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3); 
-            width: 90%; 
-            max-width: 460px; 
-            text-align: center; 
-            border: none;
-            margin-bottom: 30px;
-        }
-        
-        h1 { color: #2e4031; font-size: 32px; margin-bottom: 5px; font-weight: 700; }
-        .subtitle { color: #666; margin-bottom: 25px; font-size: 14px; text-transform: uppercase; font-weight: bold; }
-        label { display: block; text-align: right; font-weight: 700; margin-top: 20px; color: #222; font-size: 15px; }
-        input, textarea, select { width: 100%; padding: 14px; margin-top: 8px; border: 2px solid #cbd5e1; border-radius: 14px; box-sizing: border-box; font-family: 'Tajawal', sans-serif; background: #f8fafc; font-size: 14px; transition: all 0.3s; text-align: right; }
-        input:focus, textarea:focus, select:focus { border-color: #6b8e23; outline: none; background: #fff; box-shadow: 0 0 10px rgba(107, 142, 35, 0.2); }
-        
-        .btn-main { width: 100%; background: #6b8e23; color: white; padding: 16px; border: none; border-radius: 14px; margin-top: 25px; font-size: 18px; cursor: pointer; transition: 0.3s; font-family: 'Tajawal', sans-serif; font-weight: bold; box-shadow: 0 4px 12px rgba(107, 142, 35, 0.3); }
-        .btn-main:hover { background: #4a6318; transform: translateY(-2px); }
-        
-        #result-area { display: none; }
-        .result-emoji { font-size: 55px; margin-bottom: 10px; }
-
-        /* ستايل الماركت والمنتجات السفلي */
-        .market-section {
-            width: 90%;
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            border-radius: 25px;
-            padding: 30px 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-            text-align: center;
-            direction: rtl;
-        }
-
-        .market-section h2 { color: #8E44AD; font-family: 'Cairo', sans-serif; font-size: 26px; margin-bottom: 10px; }
-        .market-section .intro-p { color: #555; margin-bottom: 30px; font-size: 16px; }
-
-        .boxes-grid {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .product-card {
-            background: #fff;
-            padding: 15px;
-            border-radius: 18px;
-            width: 220px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-            transition: 0.3s;
-        }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(142, 68, 173, 0.15); }
-        .product-card img { width: 100%; border-radius: 12px; }
-        .product-card h3 { font-size: 18px; color: #333; margin: 15px 0 5px 0; font-family: 'Cairo', sans-serif; }
-        .product-card p { font-size: 14px; color: #777; margin: 0 0 15px 0; }
-
-        .btn-wa {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-            font-family: 'Cairo', sans-serif;
-        }
-        .btn-wa:hover { background: #1ebd54; }
-
-        .features-p { font-size: 15px; color: #444; background: #f3e5f5; padding: 15px; border-radius: 12px; margin: 20px 0; font-weight: bold; }
-        
-        .btn-big-wa {
-            display: inline-block;
-            background: #8E44AD;
-            color: white;
-            text-decoration: none;
-            padding: 14px 35px;
-            border-radius: 14px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s;
-            font-family: 'Cairo', sans-serif;
-            box-shadow: 0 4px 12px rgba(142, 68, 173, 0.3);
-        }
-        .btn-big-wa:hover { background: #6c3483; transform: translateY(-2px); }
-
-        footer { margin-top: 30px; color: white; font-size: 14px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-family: 'Cairo', sans-serif; }
+        body { font-family: 'Tajawal', sans-serif; background: #fdf6f6; margin: 0; padding: 0; text-align: center; }
+        .hero { background: #8E44AD; color: white; padding: 40px 20px; }
+        .container { width: 95%; max-width: 600px; margin: 20px auto; }
+        .box-card { background: white; padding: 20px; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        img { width: 100%; border-radius: 15px; margin-bottom: 10px; }
+        .btn-wa { display: block; background: #25D366; color: white; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 10px; }
+        .btn-insta { display: block; background: #E1306C; color: white; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-<!-- أولاً: كويز مساعد الهدايا الذكي FEE BOX -->
-<div class="box-container">
-    <h1>FEE BOX</h1>
-    <div class="subtitle">Mind-Reading Gift Assistant ✨</div>
-    
-    <div id="quiz-area">
-        <label>قولي لنا كده، الهدية القمر دي رايحة لمين؟ 🤔</label>
-        <select id="target">
-            <option value="men">ولد / راجل (الوحوش 💪)</option>
-            <option value="women">بنت / ست (الرقة والدلع كله 🌸)</option>
-            <option value="kids">كتكوت صغير بيحب الفرفشة 🎨</option>
-        </select>
-
-        <label>إيه أكتر ستايل هدايا تحس إنه هيفرحه؟ 🎁</label>
-        <select id="gift-style">
-            <option value="sport">حاجات جيم، تمرين، وفورمة وعاش يا بطل 🏆</option>
-            <option value="coffee">روقان، بن، مجات شيك، وتظبيط دماغ ☕</option>
-            <option value="skincare">دلع، سكين كير، وميكب وترويق 🌸</option>
-            <option value="kids-fun">ألعاب تلوين، بازل، وفرفشة وبناء ذكاء 🎨</option>
-            <option value="classic">ساعات، برفيوم، وحاجات كلاسيك فخمة ✨</option>
-            <option value="not-sure">لسه مش متأكد.. سيب الـ AI يقرر ويقترح! 🤖</option>
-        </select>
-
-        <label>افتحي لنا قلبك بقى وفضفضي هنا.. (إيه أكتر حاجات بيحب يعملها؟ بيقضي يومه إيه؟ إيه اللي بيبسطه؟) ✍️</label>
-        <textarea id="about" rows="4" placeholder="اكتبي براحتك.. بيحب القهوة، مدمن بلايستيشن، وراه طحن مذاكرة، بيحب القراءة.. والـ AI بتاعنا هيحلل شخصيته ويلقط الهدية صح!"></textarea>
-        
-        <button class="btn-main" onclick="analyzeGift()">اكتشف الهدية المثالية 🎁</button>
-    </div>
-
-    <div id="result-area">
-        <div class="result-emoji" id="res-emoji"></div>
-        <h2 id="res-title" style="color: #6b8e23; font-size: 26px; margin-top: 0; font-family:'Tajawal';"></h2>
-        <p id="res-desc" style="font-size: 16px; line-height: 1.7; color: #222; margin-bottom: 25px; text-align: right; direction: rtl;"></p>
-        <button class="btn-main" onclick="location.reload()" style="background: #4a5d4e;">جرّب مع شخص تاني 🔄</button>
-    </div>
+<div class="hero">
+    <h1>Fei B0X</h1>
+    <p>أسهل طريقة تقدمي هدية مميزة</p>
 </div>
 
-<!-- ثانياً: معرض البوكسات الجاهزة ViB0x -->
-<div class="market-section">
-    <h2>أسهل طريقة تقدمي هدية مميزة 🌟</h2>
-    <p class="intro-p">بوكسات هدايا جاهزة ومخصصة بتفاصيل دقيقة تلفت القلب</p>
-    
-    <h3 style="color:#444; margin-bottom:20px; font-family:'Cairo';">الأكثر طلبًا 🔥</h3>
-    <div class="boxes-grid">
-
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300" alt="بوكس الدلع">
-            <h3>بوكس الدلع</h3>
-            <p>هدية ناعمة ومميزة 🌸</p>
-            <a class="btn-wa" href="https://wa.me/201XXXXXXXXX">اطلب الآن 💬</a>
-        </div>
-
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300" alt="بوكس المفاجأة">
-            <h3>بوكس المفاجأة</h3>
-            <p>تجربة غير متوقعة 🎈</p>
-            <a class="btn-wa" href="https://wa.me/201XXXXXXXXX">اطلب الآن 💬</a>
-        </div>
-
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300" alt="بوكس الرومانسية">
-            <h3>بوكس الرومانسية</h3>
-            <p>مناسب للمناسبات الخاصة ❤️</p>
-            <a class="btn-wa" href="https://wa.me/201XXXXXXXXX">اطلب الآن 💬</a>
-        </div>
-
-    </div>
-
-    <h3 style="color:#444; font-family:'Cairo';">ليه تختارينا؟</h3>
-    <p class="features-p">✨ تغليف أنيق - سرعة في التوصيل - تخصيص كامل - جودة مضمونة ✨</p>
-
-    <h3 style="color:#444; font-family:'Cairo';">اعملي بوكسك بنفسك 🛠️</h3>
-    <p style="color:#666; margin-bottom:25px;">اكتبي لنا واختاري كل التفاصيل والميزانية حسب ذوقك بالظبط</p>
-
-    <h3 style="color:#444; font-family:'Cairo';">آراء عميلاتنا السكاكر ماليانا ثقة 🥰</h3>
-    <p style="color:#444; font-style: italic;">"البوكس كان أفضل من المتوقع بجد والتغليف أنيق جداً وشرفني!"</p>
-    
-    <div style="margin-top:35px;">
-        <a class="btn-big-wa" href="https://wa.me/201XXXXXXXXX">تواصل وابدئي طلبك الآن 🚀</a>
+<div class="container">
+    <div class="box-card">
+        <h3>مجموعة البوكسات الفخمة</h3>
+        <img src="https://i.ibb.co/6N1Z1qJ/1000019024.png" alt="بوكس رجالي">
+        <img src="https://i.ibb.co/0n6Xy0w/1000019023.png" alt="بوكس أطفال وبنات">
+        <img src="https://i.ibb.co/D8L2T6G/1000019020.png" alt="بوكسات متنوعة">
+        
+        <a class="btn-wa" href="https://wa.me/201092778819">اطلب الآن عبر واتساب 💬</a>
+        <a class="btn-insta" href="https://www.instagram.com/fei_b0x?igsh=MWRrbDBvenJ3aXpjcg==">تابعونا على انستجرام 📸</a>
     </div>
 </div>
-
-<footer>
-    <p>ViB0x & FEE BOX جميع الحقوق محفوظة ©️ 2026</p>
-</footer>
-
-<script>
-    function analyzeGift() {
-        const text = document.getElementById('about').value;
-        const giftStyle = document.getElementById('gift-style').value;
-        
-        document.getElementById('quiz-area').style.display = 'none';
-        document.getElementById('result-area').style.display = 'block';
-
-        const emoji = document.getElementById('res-emoji');
-        const title = document.getElementById('res-title');
-        const desc = document.getElementById('res-desc');
-
-        if (giftStyle === 'sport' || text.includes('جيم') || text.includes('رياضة') || text.includes('تمرين') || text.includes('gym')) {
-            emoji.innerText = "🏆";
-            title.innerText = "For The Grind Box";
-            desc.innerText = "تحليل شخصية الـ AI: الشخص ده طموح، نشيط، وعاشق للتحدي والفورمة! بوكس الـ Grind الملكي بتاعنا هو الأنسب ليه، مليان طاقة وحاجات تشجعه يفرتك التمرين ويحقق أهدافه.";
-        } 
-        else if (giftStyle === 'coffee' || text.includes('قهوة') || text.includes('شغل') || text.includes('مذاكرة') || text.includes('coffee') || text.includes('قراءة')) {
-            emoji.innerText = "☕";
-            title.innerText = "The Focus & Chill Box";
-            desc.innerText = "تحليل شخصية الـ AI: ده شخص دحيح وطموح، وراه طحن تفكير أو مذاكرة وبيدور على الروقان وسط الزحمة! البوكس ده معمول مخصوص عشان يظبط الدماغ ويفصله بجرعة كافيين وراحة تامة.";
-        } 
-        else if (giftStyle === 'skincare' || text.includes('دلع') || text.includes('سكين') || text.includes('ميكاب') || text.includes('skin') || text.includes('اهتمام')) {
-            emoji.innerText = "🌸";
-            title.innerText = "I'm Just A Girl Box";
-            desc.innerText = "تحليل شخصية الـ AI: الرقة والدلع كله! الشخصية دي بتحب الاهتمام والتفاصيل الرايقة. البوكس البينك ده فيه كل أسرار الترويق والسكين كير اللي تخلي المود بتاعها دايماً في السحاب.";
-        } 
-        else if (giftStyle === 'kids-fun' || text.includes('تلوين') || text.includes('لعب') || text.includes('رسم') || text.includes('اطفال') || text.includes('طفل')) {
-            emoji.innerText = "🎨";
-            title.innerText = "The Creative Kid Box";
-            desc.innerText = "تحليل شخصية الـ AI: كتكوت عبقري ومليان طاقة وفضول! البوكس ده مليان ألعاب تلوين، بازل، وحاجات فنية بتشغل ذكاءه وتخليه يطلع إبداعه ويفرفش بعيد عن الشاشات.";
-        } 
-        else if (giftStyle === 'classic' || text.includes('ساعة') || text.includes('برفيوم') || text.includes('شيك') || text.includes('فخم')) {
-            emoji.innerText = "✨";
-            title.innerText = "The Elegance Classic Box";
-            desc.innerText = "تحليل شخصية الـ AI: شخصية كلاسيكية، بتحب الفخامة والشياكة والهيبة. البوكس ده بيجمع بين الأناقة والجمال، هدايا راقية تليق بمقامه وتخليه متميز وسط الكل.";
-        } 
-        else {
-            emoji.innerText = "🔮";
-            title.innerText = "The Custom FEE BOX Magic";
-            desc.innerText = "تحليل شخصية الـ AI: لقطنا الفولة! بناءً على الفضفضة والكلام الجامد اللي حكيتيه عنه، إحنا هنفصل له بوكس مخصص 'تفصيل' على مقاس شخصيته الفريدة وهواياته. هدايا كرييتف ومستحيل يتوقعها!";
-        }
-    }
-</script>
 
 </body>
 </html>
