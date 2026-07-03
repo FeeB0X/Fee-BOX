@@ -3,33 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fei B0X</title>
+    <title>Fei B0X | Every Gift Tells a Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; background: #fdf6f6; text-align: center; padding: 20px; }
-        .container { background: white; padding: 30px; border-radius: 20px; margin: 20px auto; max-width: 500px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h1 { color: #8E44AD; }
-        .btn { display: block; background: #E1306C; color: white; padding: 15px; margin: 15px 0; border-radius: 12px; text-decoration: none; font-weight: bold; }
-        textarea, select { width: 100%; padding: 12px; margin: 10px 0; border-radius: 10px; border: 1px solid #ccc; box-sizing: border-box; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Cairo', sans-serif; }
+        body { background:#F8F6F2; color:#333; }
+        header { background:#fff; padding:20px 8%; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 15px rgba(0,0,0,.08); position:sticky; top:0; z-index:1000; }
+        .logo { font-size:32px; font-weight:bold; color:#5E7C4D; }
+        nav a { text-decoration:none; color:#444; margin:0 15px; font-weight:600; }
+        .hero { padding:80px 8%; text-align:center; }
+        .hero h1 { font-size:45px; color:#5E7C4D; margin-bottom:20px; }
+        .section-title { text-align:center; font-size:40px; margin-top:70px; margin-bottom:40px; color:#5E7C4D; }
+        .boxes { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:20px; padding:0 8% 80px; }
+        .card { background:#fff; border-radius:20px; box-shadow:0 8px 25px rgba(0,0,0,.08); padding:20px; text-align:center; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Fei B0X</h1>
-    <p>مساعد الهدايا الذكي ✨</p>
-    
-    <label>مين صاحب الهدية؟</label>
-    <select id="target">
-        <option>ولد</option>
-        <option>بنت</option>
-        <option>طفل</option>
-    </select>
-    
-    <textarea id="about" rows="3" placeholder="احكي لي بيحب إيه؟"></textarea>
-    
-    <!-- زرار الطلب موجه للانستجرام -->
-    <a class="btn" href="https://www.instagram.com/fei_b0x?igsh=MWRrbDBvenJ3aXpjcg==">اطلب الآن (عبر انستجرام) 📸</a>
-</div>
+<header>
+    <div class="logo">Fei B0X 🎁</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#finder">Gift Finder</a>
+        <a href="#build">Build Your Box</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Every Gift Tells a Story ✨</h1>
+    <p>اكتشفي أجمل بوكس هدية مخصص لكل شخصية ولكل مناسبة.</p>
+</section>
+
+<!-- ========== GIFT FINDER ========== -->
+<section id="finder" style="padding:80px 8%;background:#F8F6F2;">
+    <h2 class="section-title">🤖 Gift Finder</h2>
+    <div style="max-width:700px;margin:auto;background:white;padding:30px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08);">
+        <label>الهدية لمين؟</label>
+        <select id="person" style="width:100%;padding:15px;margin:15px 0;border-radius:10px;">
+            <option>ولد</option>
+            <option>بنت</option>
+            <option>طفل</option>
+        </select>
+        <label>هو بيحب إيه؟</label>
+        <textarea id="about" placeholder="مثلاً: قهوة - جيم - ميكب - ألعاب..." style="width:100%;padding:15px;height:120px;border-radius:10px;"></textarea>
+        <button onclick="giftAI()" style="margin-top:20px;background:#5E7C4D;color:white;padding:15px 35px;border:none;border-radius:10px;font-size:18px;cursor:pointer;">اكتشف الهدية 🎁</button>
+        <h2 id="answer" style="margin-top:25px;color:#5E7C4D;"></h2>
+    </div>
+</section>
+
+<!-- ========== BUILD YOUR BOX ========== -->
+<section id="build" style="padding:80px 8%;">
+    <h2 class="section-title">💝 Build Your Own Box</h2>
+    <div class="boxes">
+        <div class="card">🍫 شوكولاتة</div>
+        <div class="card">☕ مج</div>
+        <div class="card">🕯️ شمعة</div>
+        <div class="card">🌸 سكين كير</div>
+        <div class="card">🎧 سماعات</div>
+        <div class="card">💌 كارت</div>
+    </div>
+</section>
+
+<!-- ========== WHY FEI B0X ========== -->
+<section style="padding:80px 8%;background:#ffffff;">
+    <h2 class="section-title">ليه Fei B0X؟ 💚</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;text-align:center;">
+        <div class="card"><h2>🎁</h2><h3>بوكسات مخصصة</h3></div>
+        <div class="card"><h2>🚚</h2><h3>توصيل سريع</h3></div>
+        <div class="card"><h2>💌</h2><h3>كارت مجاني</h3></div>
+    </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section style="padding:80px 8%;">
+    <h2 class="section-title">آراء عملائنا ⭐</h2>
+    <div class="boxes" style="grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));">
+        <div class="card">⭐⭐⭐⭐⭐<p>"البوكس وصل أحلى من الصور بجد."</p><b>سارة</b></div>
+        <div class="card">⭐⭐⭐⭐⭐<p>"التغليف شيك جدًا والهدية عجبتهم."</p><b>محمد</b></div>
+    </div>
+</section>
+
+<!-- ========== INSTAGRAM ========== -->
+<section style="background:#5E7C4D;color:white;padding:70px 20px;text-align:center;">
+    <h2 style="font-size:40px;">تابعينا على Instagram 📸</h2>
+    <a href="https://www.instagram.com/fei_b0x" style="background:#E1306C;color:white;padding:18px 40px;border-radius:15px;text-decoration:none;font-size:20px;font-weight:bold;">Order Now</a>
+</section>
+
+<footer style="background:#222;color:white;padding:30px;text-align:center;">
+    <h2>Fei B0X 🎁</h2>
+    <p>©️ 2026 جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+    function giftAI(){
+        let text = document.getElementById("about").value.toLowerCase();
+        let result = "🎁 Custom Fei B0X";
+        if(text.includes("قهوة")||text.includes("coffee")) result = "☕ Coffee Box";
+        else if(text.includes("جيم")||text.includes("gym")) result = "💪 Fitness Box";
+        else if(text.includes("ميكب")||text.includes("skin")) result = "🌸 Self Care Box";
+        else if(text.includes("شوكولاتة")) result = "🍫 Chocolate Box";
+        else if(text.includes("العاب")||text.includes("game")) result = "🎮 Gamer Box";
+        document.getElementById("answer").innerHTML = "أفضل اختيار ليك هو:<br><br><b>" + result + "</b>";
+    }
+</script>
 
 </body>
 </html>
