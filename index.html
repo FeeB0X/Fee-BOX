@@ -3,48 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fei B0X | متجر الهدايا</title>
+    <title>Fei B0X | هدايا مخصصة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fdf6f6; margin: 0; padding: 20px; text-align: center; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #fdf6f6; margin: 0; padding: 20px; text-align: center; }
+        .box-container { background: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 90%; max-width: 500px; margin: 0 auto 30px; }
         h1 { color: #8E44AD; }
-        .box-card { background: white; padding: 15px; border-radius: 20px; margin: 20px auto; max-width: 500px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        img { width: 100%; border-radius: 15px; display: block; }
-        .btn { display: block; width: 90%; margin: 15px auto; padding: 15px; border-radius: 10px; text-decoration: none; color: white; font-weight: bold; font-size: 16px; transition: 0.3s; }
+        img { width: 100%; border-radius: 15px; margin: 15px 0; display: block; }
+        .btn { display: block; width: 100%; padding: 15px; border-radius: 12px; text-decoration: none; color: white; font-weight: bold; margin: 10px 0; transition: 0.3s; }
         .btn-wa { background-color: #25D366; }
         .btn-ig { background-color: #E1306C; }
-        .footer-text { margin-top: 30px; color: #666; }
+        select, textarea { width: 100%; padding: 12px; margin: 10px 0; border-radius: 10px; border: 1px solid #ccc; }
+        .market-section { background: white; padding: 20px; border-radius: 20px; max-width: 500px; margin: 0 auto; }
     </style>
 </head>
 <body>
 
+<!-- جزء الـ AI -->
+<div class="box-container">
     <h1>Fei B0X</h1>
-    <p>أجمل الهدايا لكل المناسبات</p>
+    <p>مساعد الهدايا الذكي ✨</p>
+    <label>مين صاحب الهدية؟</label>
+    <select id="target">
+        <option value="men">ولد / راجل</option>
+        <option value="women">بنت / ست</option>
+        <option value="kids">كتكوت صغير</option>
+    </select>
+    <textarea id="about" rows="3" placeholder="احكي لي بيحب إيه؟"></textarea>
+    <button class="btn btn-wa" onclick="alert('جاري تحليل شخصيته.. تواصل واتساب لطلب الهدية!')">اكتشف الهدية</button>
+</div>
 
-    <!-- البوكس الأول -->
-    <div class="box-card">
-        <img src="https://i.ibb.co/6N1Z1qJ/1000019024.png" alt="Box 1">
-        <a class="btn btn-wa" href="https://wa.me/201092778819">اطلب الآن عبر واتساب 💬</a>
-    </div>
+<!-- جزء المنتجات -->
+<div class="market-section">
+    <h2>بوكساتنا المميزة 🎁</h2>
+    
+    <img src="https://i.ibb.co/6N1Z1qJ/1000019024.png" alt="بوكس رجالي">
+    <a class="btn btn-wa" href="https://wa.me/201092778819">اطلب الآن (واتساب) 💬</a>
 
-    <!-- البوكس الثاني -->
-    <div class="box-card">
-        <img src="https://i.ibb.co/0n6Xy0w/1000019023.png" alt="Box 2">
-        <a class="btn btn-wa" href="https://wa.me/201092778819">اطلب الآن عبر واتساب 💬</a>
-    </div>
+    <img src="https://i.ibb.co/0n6Xy0w/1000019023.png" alt="بوكس أطفال وبنات">
+    <a class="btn btn-wa" href="https://wa.me/201092778819">اطلب الآن (واتساب) 💬</a>
 
-    <!-- البوكس الثالث -->
-    <div class="box-card">
-        <img src="https://i.ibb.co/D8L2T6G/1000019020.png" alt="Box 3">
-        <a class="btn btn-wa" href="https://wa.me/201092778819">اطلب الآن عبر واتساب 💬</a>
-    </div>
+    <img src="https://i.ibb.co/D8L2T6G/1000019020.png" alt="بوكس متنوع">
+    <a class="btn btn-wa" href="https://wa.me/201092778819">اطلب الآن (واتساب) 💬</a>
 
-    <!-- زرار الانستجرام -->
-    <div class="box-card">
-        <h3>تابعونا على انستجرام</h3>
-        <a class="btn btn-ig" href="https://www.instagram.com/fei_b0x?igsh=MWRrbDBvenJ3aXpjcg==">زيارة الصفحة 📸</a>
-    </div>
-
-    <p class="footer-text">شكراً لاختياركم Fei B0X</p>
+    <h3 style="margin-top:30px;">تابعونا على انستجرام</h3>
+    <a class="btn btn-ig" href="https://www.instagram.com/fei_b0x?igsh=MWRrbDBvenJ3aXpjcg==">زيارة صفحة انستجرام 📸</a>
+</div>
 
 </body>
 </html>
